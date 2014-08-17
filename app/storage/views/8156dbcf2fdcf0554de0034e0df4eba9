@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <?php echo $__env->make('smart/include.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</head>
+<body class="">
+<!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+
+<!-- HEADER -->
+<header id="header">
+    <?php echo $__env->make('smart/include.topmenu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</header>
+<!-- END HEADER -->
+
+<!-- Left panel : Navigation area -->
+<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+<aside id="left-panel">
+
+    <!-- User info -->
+    <?php echo $__env->make('smart/include.userInfo', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <!-- end user info -->
+    <!-- left menu-->
+    <?php echo $__env->make('smart/include.leftmenu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+</aside>
+<!-- END NAVIGATION -->
+
+<!-- MAIN PANEL -->
+<div id="main" role="main">
+
+    <!-- RIBBON -->
+    <?php echo $__env->make('smart/include.ribon', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <!-- END RIBBON -->
+
+    <!-- MAIN CONTENT -->
+    <?php echo $__env->yieldContent('content'); ?>
+    <!-- END MAIN CONTENT -->
+
+</div>
+<!-- END MAIN PANEL -->
+
+<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+Note: These tiles are completely responsive,
+you can add as many as you like
+-->
+<?php echo $__env->make('smart/include.shortcut', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<!-- END SHORTCUT AREA -->
+
+<!--================================================== -->
+
+<?php echo $__env->make('smart/include.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+</body>
+
+</html>

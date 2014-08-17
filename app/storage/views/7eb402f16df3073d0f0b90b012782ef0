@@ -1,0 +1,13 @@
+
+<?php $__env->startSection('content'); ?>
+
+    <h1> salut</h1>
+
+    <?php foreach($users as $user): ?>
+
+        <li><?php echo link_to("/users/{$user->username}",$user->username); ?></li>
+
+    <?php endforeach; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

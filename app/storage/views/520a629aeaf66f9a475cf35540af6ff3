@@ -1,0 +1,28 @@
+<!-- NAVIGATION : This navigation is also responsive
+
+To make this navigation dynamic please make sure to link the node
+(the reference to the nav > ul) after page load. Or the navigation
+will not initialize.
+-->
+<nav>
+<!-- NOTE: Notice the gaps after each icon usage <i></i>..
+Please note that these links work a bit different than
+traditional hre="" links. See documentation for details.
+-->
+    <ul>
+        <li>
+            <a><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Administrare</span></a>
+            <ul>
+                <li <?php echo Request::is('tipactori') ? 'class=active' : ''; ?>>
+                    <a href="tipactori">Tip Actori</a> 
+                </li>
+                <li <?php echo Request::is('actori') ? 'class=active' : ''; ?>>
+                    <a href="actori">Actori</a>
+                </li>
+
+            </ul>
+        </li>
+
+    </ul>
+</nav>
+<span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
