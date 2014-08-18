@@ -11,10 +11,10 @@ traditional hre="" links. See documentation for details.
 -->
     <ul>
         <li {{ Request::is('categories') ? 'class=active' : '' }}>
-            <a href="../categories"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Categories</span></a>
+            <a href="{{ URL::to('categories') }}"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Categories</span></a>
         </li>
         <li {{ Request::is('posts') || Request::is('/') ? 'class=active' : '' }}>
-            <a href="../posts"><i class="fa fa-lg fa-fw fa-edit"></i><span>Posts</span></a>
+        <a href="{{ URL::to('posts') }}"><i class="fa fa-lg fa-fw fa-edit"></i><span>Posts</span></a>
         </li>
 
     </ul>

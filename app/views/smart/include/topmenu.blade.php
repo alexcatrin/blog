@@ -2,7 +2,7 @@
 
         <!-- PLACE YOUR LOGO HERE -->
         <span id="logo">
-            <a href="/">{{ HTML::image('img/logo_blog.png','Netsells | Blog') }}</a>
+            <a href="{{ URL::to('/') }}">{{ HTML::image('img/logo_blog.png','Netsells | Blog') }}</a>
 
         </span>
         <!-- END LOGO PLACEHOLDER -->
